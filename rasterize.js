@@ -77,11 +77,12 @@ function loadTriangles() {
         var coordArray = []; // 1D array of vertex coords for WebGL
         
         for (var whichSet=0; whichSet<inputTriangles.length; whichSet++) {
-            
-            // set up the vertex coord array
-            for (whichSetVert=0; whichSetVert<inputTriangles[whichSet].vertices.length; whichSetVert++){
-                coordArray = coordArray.concat(inputTriangles[whichSet].vertices[whichSetVert]);
-                // console.log(inputTriangles[whichSet].vertices[whichSetVert]);
+            for (var whichSetTri=0; whichSetTri<inputTriangles[whichSet].triangles.length; whichSetTri++) {
+                // set up the vertex coord array
+                for (whichSetVert=0; whichSetVert<inputTriangles[whichSet].triangles[whichSetTri].length; whichSetVert++){
+                    coordArray = coordArray.concat(inputTriangles[whichSet].vertices[inputTriangles[whichSet].triangles[whichSetTri][whichSetVert]]);
+                    // console.log(inputTriangles[whichSet].vertices[whichSetVert]);
+                }
             }
         } // end for each triangle set 
         // console.log(coordArray.length);
