@@ -72,8 +72,8 @@ function setupWebGL() {
 function loadTriangles() {
     var inputTriangles = getJSONFile(INPUT_TRIANGLES_URL,"triangles");
     if (inputTriangles != String.null) { 
-        var whichSetVert; // index of vertex in current triangle set
-        var whichSetTri; // index of triangle in current triangle set
+        //var whichSetVert; // index of vertex in current triangle set
+        //var whichSetTri; // index of triangle in current triangle set
         var coordArray = []; // 1D array of vertex coords for WebGL
         
         for (var whichSet=0; whichSet<inputTriangles.length; whichSet++) {
