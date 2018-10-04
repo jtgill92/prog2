@@ -75,6 +75,8 @@ function loadTriangles() {
         //var whichSetVert; // index of vertex in current triangle set
         //var whichSetTri; // index of triangle in current triangle set
         //var coordArray = []; // 1D array of vertex coords for WebGL
+        vertexBuffer = gl.createBuffer(); // init empty vertex coord buffer
+        gl.bindBuffer(gl.ARRAY_BUFFER,vertexBuffer); // activate that buffer
         
         /*for (var whichSet=0; whichSet<inputTriangles.length; whichSet++) {
             for (var whichSetTri=0; whichSetTri<inputTriangles[whichSet].triangles.length; whichSetTri++) {
@@ -109,8 +111,6 @@ function loadTriangles() {
                 coordArray = coordArray.concat(vertexPos2);
                 coordArray = coordArray.concat(vertexPos3);
                 
-                vertexBuffer = gl.createBuffer(); // init empty vertex coord buffer
-                gl.bindBuffer(gl.ARRAY_BUFFER,vertexBuffer); // activate that buffer
                 gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(coordArray),gl.STATIC_DRAW); // coords to that buffer
             }
         }
