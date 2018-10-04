@@ -76,11 +76,11 @@ function loadTriangles() {
         //var whichSetTri; // index of triangle in current triangle set
         var coordArray = []; // 1D array of vertex coords for WebGL
         
-        for (var whichSet=0; whichSet<inputTriangles.length; whichSet++) {
+        /*for (var whichSet=0; whichSet<inputTriangles.length; whichSet++) {
             for (var whichSetTri=0; whichSetTri<inputTriangles[whichSet].triangles.length; whichSetTri++) {
                 // set up the vertex coord array
                 var triangle = inputTriangles[whichSet].triangles[whichSetTri];
-                for (var whichSetVert=0; whichSetVert<3/*inputTriangles[whichSet].triangles[whichSetTri].length*/; whichSetVert++) {
+                for (var whichSetVert=0; whichSetVert<3; whichSetVert++) {
                     //var triangle = inputTriangles[whichSet].triangles[whichSetTri];
                     var vertex = triangle[whichSetVert];
                     //var vertex = inputTriangles[whichSet].triangles[whichSetTri][whichSetVert];
@@ -89,7 +89,24 @@ function loadTriangles() {
                     // console.log(inputTriangles[whichSet].vertices[whichSetVert]);
                 } //end for each vertex
             } // end for each triangle
-        } // end for each triangle set 
+        }/* // end for each triangle set
+        for (var f = 0; f < n; f++) {
+            var tn = inputTriangles[f].triangles.length;
+            // Loop over the triangles, draw each in 2d
+            for(var tri = 0; tri < tn; tri++) {
+                var vertex1 = inputTriangles[f].triangles[tri][0];
+                var vertex2 = inputTriangles[f].triangles[tri][1];
+                var vertex3 = inputTriangles[f].triangles[tri][2];
+                
+                var vertexPos1 = inputTriangles[f].vertices[vertex1];
+                var vertexPos2 = inputTriangles[f].vertices[vertex2];
+                var vertexPos3 = inputTriangles[f].vertices[vertex3];
+                
+                coordArray = coordArray.concat(vertexPos1);
+                coordArray = coordArray.concat(vertexPos2);
+                coordArray = coordArray.concat(vertexPos3);
+            }
+        }
         // console.log(coordArray.length);
         // send the vertex coords to webGL
         vertexBuffer = gl.createBuffer(); // init empty vertex coord buffer
