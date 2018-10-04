@@ -89,7 +89,7 @@ function loadTriangles() {
                     // console.log(inputTriangles[whichSet].vertices[whichSetVert]);
                 } //end for each vertex
             } // end for each triangle
-        }/* // end for each triangle set
+        }*/ // end for each triangle set
         var n = inputTriangles.length;
         for (var f = 0; f < n; f++) {
             var tn = inputTriangles[f].triangles.length;
