@@ -80,7 +80,7 @@ function loadTriangles() {
             for (var whichSetTri=0; whichSetTri<inputTriangles[whichSet].triangles.length; whichSetTri++) {
                 // set up the vertex coord array
                 var triangle = inputTriangles[whichSet].triangles[whichSetTri];
-                for (var whichSetVert=0; whichSetVert<inputTriangles[whichSet].triangles[whichSetTri].length; whichSetVert++) {
+                for (var whichSetVert=0; whichSetVert<3/*inputTriangles[whichSet].triangles[whichSetTri].length*/; whichSetVert++) {
                     //var triangle = inputTriangles[whichSet].triangles[whichSetTri];
                     var vertex = triangle[whichSetVert];
                     //var vertex = inputTriangles[whichSet].triangles[whichSetTri][whichSetVert];
