@@ -95,9 +95,9 @@ function loadTriangles() {
         gl.bindBuffer(gl.ARRAY_BUFFER,vertexBuffer); // activate that buffer
         gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(coordArray),gl.STATIC_DRAW); // coords to that buffer
         
-        triangleBuffer = gl.createBuffer(); // init empty vertex coord buffer
-        gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,triangleBuffer); // activate that buffer
-        gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,new uINT16Array(indexArray),gl.STATIC_DRAW); // coords to that buffer
+        //triangleBuffer = gl.createBuffer(); // init empty vertex coord buffer
+        //gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,triangleBuffer); // activate that buffer
+        //gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,new uINT16Array(indexArray),gl.STATIC_DRAW); // coords to that buffer
         
     } // end if triangles found
 } // end load triangles
