@@ -106,13 +106,19 @@ function loadTriangles() {
                 coordArray = coordArray.concat(vertexPos1);
                 coordArray = coordArray.concat(vertexPos2);
                 coordArray = coordArray.concat(vertexPos3);
+                
+                vertexBuffer = gl.createBuffer(); // init empty vertex coord buffer
+
+        gl.bindBuffer(gl.ARRAY_BUFFER,vertexBuffer); // activate that buffer
+
+        gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(coordArray),gl.STATIC_DRAW); // coords to that buffer
             }
         }
         // console.log(coordArray.length);
         // send the vertex coords to webGL
-        vertexBuffer = gl.createBuffer(); // init empty vertex coord buffer
-        gl.bindBuffer(gl.ARRAY_BUFFER,vertexBuffer); // activate that buffer
-        gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(coordArray),gl.STATIC_DRAW); // coords to that buffer
+        //vertexBuffer = gl.createBuffer(); // init empty vertex coord buffer
+        //gl.bindBuffer(gl.ARRAY_BUFFER,vertexBuffer); // activate that buffer
+        //gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(coordArray),gl.STATIC_DRAW); // coords to that buffer
         
     } // end if triangles found
 } // end load triangles
