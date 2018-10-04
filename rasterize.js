@@ -90,6 +90,7 @@ function loadTriangles() {
                 } //end for each vertex
             } // end for each triangle
         }/* // end for each triangle set
+        var n = inputTriangles.length;
         for (var f = 0; f < n; f++) {
             var tn = inputTriangles[f].triangles.length;
             // Loop over the triangles, draw each in 2d
