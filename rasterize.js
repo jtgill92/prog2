@@ -125,7 +125,7 @@ function loadTriangles() {
         // send the color components to WebGL
         colorBuffer = gl.createBuffer(); // init empty vertex coord buffer
         gl.bindBuffer(gl.ARRAY_BUFFER,colorBuffer); // activate that buffer
-        gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(colorArray),gl.STATIC_DRAW); // coords to that buffer
+        gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(colorArray),gl.STATIC_DRAW); // colors to that buffer
 
     } // end if triangles found
 } // end load triangles
@@ -139,9 +139,9 @@ function setupShaders() {
         attribute vec3 vertexColor;
 
         void main(void) {
-            gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0); // all fragments are white
+            //gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0); // all fragments are white
             //gl_FragColor = uMaterialDiffuse;
-            //gl_FragColor = vec4(vertexColor, 1.0);
+            gl_FragColor = vec4(vertexColor, 1.0);
         }
     `;
     
