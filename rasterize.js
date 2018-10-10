@@ -91,7 +91,8 @@ function loadTriangles() {
             
             // set up the vertex color array
             for (whichSetVert=0; whichSetVert<inputTriangles[whichSet].vertices.length; whichSetVert++) {
-                colToAdd = inputTriangles[whichSet].material.diffuse;
+                //colToAdd = inputTriangles[whichSet].material.diffuse;
+                colToAdd = [0.4, 0.6, 0.6];
                 colorArray.push(colToAdd[0],colToAdd[1],colToAdd[2]);
             } // end for vertices in set
             
