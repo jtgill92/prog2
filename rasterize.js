@@ -201,13 +201,13 @@ function setupShaders() {
 function renderTriangles() {
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT); // clear frame/depth buffers
     
-    // vertex buffer: activate and feed into vertex shader
-    gl.bindBuffer(gl.ARRAY_BUFFER,vertexBuffer); // activate
-    gl.vertexAttribPointer(vertexPositionAttrib,3,gl.FLOAT,false,0,0); // feed
-    
     // color buffer: activate and feed into fragment shader
     gl.bindBuffer(gl.ARRAY_BUFFER,colorBuffer); // activate
     gl.vertexAttribPointer(vertexColorAttrib,3,gl.FLOAT,false,0,0); // feed
+    
+    // vertex buffer: activate and feed into vertex shader
+    gl.bindBuffer(gl.ARRAY_BUFFER,vertexBuffer); // activate
+    gl.vertexAttribPointer(vertexPositionAttrib,3,gl.FLOAT,false,0,0); // feed
 
     // triangle buffer: activate and render
     gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,triangleBuffer); // activate
