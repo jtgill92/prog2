@@ -143,7 +143,7 @@ function setupShaders() {
     
     // define fragment shader in essl using es6 template strings
     var fShaderCode = `
-        varying vec3 vFinalColor;
+        varying lowp vec3 vFinalColor;
 
         void main(void) {
             //gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0); // all fragments are white
