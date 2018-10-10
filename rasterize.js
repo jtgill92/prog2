@@ -146,8 +146,8 @@ function setupShaders() {
         varying lowp vec3 vFinalColor;
 
         void main(void) {
-            //gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0); // all fragments are white
-            gl_FragColor = vec4(vFinalColor, 1.0);
+            gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0); // all fragments are white
+            //gl_FragColor = vec4(vFinalColor, 1.0);
         }
     `;
     
